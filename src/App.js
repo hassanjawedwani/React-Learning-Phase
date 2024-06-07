@@ -8,7 +8,7 @@ import Person from './Person';
 function App() {
   return (
     <div>
-      {/* <User /> */}
+      <User />
       {/* <Person /> */}
       {/* <MyClass /> */}
     </div>

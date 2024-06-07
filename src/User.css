@@ -1,0 +1,11 @@
+body {
+    background-color: black;
+    color: white;
+
+}
+
+label,
+button {
+    display: block;
+    width: 100%;
+}

@@ -105,3 +105,23 @@
 // };
 
 // export default Person;
+
+// import React from 'react';
+// class Person extends React.Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             isShowing: true
+//         }
+//     }
+//     render() {
+//         return (
+//             <div>
+//                 <button type="button" onClick={()=>{this.setState(state=>({isShowing: !state.isShowing}))}}>Toggle</button>
+//                 {this.state.isShowing && <h1>Heading is showing</h1>}
+//             </div>
+//         );
+//     }
+// };
+
+// export default Person;
