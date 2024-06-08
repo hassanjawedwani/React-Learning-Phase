@@ -8,8 +8,8 @@ import Person from './Person';
 function App() {
   return (
     <div>
-      <User />
-      {/* <Person /> */}
+      {/* <User /> */}
+      <Person />
       {/* <MyClass /> */}
     </div>
   );
