@@ -243,3 +243,55 @@
 // };
 
 // export default Person;
+
+// import React, {Component} from 'react';
+// class Person extends Component {
+
+//     constructor(props) {
+//         super(props);
+//         this.alertFunc = this.alertFunc.bind(this);
+//     }
+
+//     alertFunc() {
+//         alert("hello");
+//     }
+
+//     render() {
+//         return (
+//             <div>
+//                 <Child func={this.alertFunc}/>
+//             </div>
+//         );
+//     }
+// };
+
+// class Child extends Component {
+//     render() {
+//         return (
+//             <div>
+//                 <button type="button" onClick={this.props.func}>Alert</button>
+//             </div>
+//         );
+//     }
+// };
+
+// export default Person;
+
+import React, {Component} from 'react';
+
+class Person extends Component {
+    constructor() {
+        super();
+        console.log("constructor called");
+    }
+    render() {
+        console.log("render called");
+        return (
+            <div>
+
+            </div>
+        );
+    }
+};
+
+export default Person;

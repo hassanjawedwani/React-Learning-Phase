@@ -181,3 +181,33 @@
 // }
 
 // export default User;
+
+//passing function as args 
+
+// import PropTypes from 'prop-types';
+
+// const ChildComponent = (props) => {
+//     return (
+//         <div>
+//           <h1>Child Component</h1>
+//           <button type="button" onClick={props.alertProp}>Alert</button>
+//         </div>
+//     );
+// }
+
+// ChildComponent.propTypes = {
+//     alertProp: PropTypes.func.isRequired
+// }
+
+// const User = () => {
+//     const alertFunc = () => {
+//         alert("Hello World");
+//     }
+//     return (
+//         <div>
+//             <ChildComponent alertProp={alertFunc}/>
+//         </div>
+//     )
+// }
+
+// export default User;
