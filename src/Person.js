@@ -277,21 +277,139 @@
 
 // export default Person;
 
-import React, {Component} from 'react';
+// import React, {Component} from 'react';
 
-class Person extends Component {
-    constructor() {
-        super();
-        console.log("constructor called");
-    }
-    render() {
-        console.log("render called");
-        return (
-            <div>
+// class Person extends Component {
+//     constructor() {
+//         super();
+//         this.state = {
+//             name: "hassan"
+//         }
+//         this.update = this.update.bind(this);
+//         console.log("constructor called");
+//     }
 
-            </div>
-        );
-    }
-};
+//     update() {
+//         this.setState({
+//             name: "NUman"
+//         })
+//         console.log("state update");
+//     }
 
-export default Person;
+//     render() {
+//         console.log("render called");
+//         return (
+//             <div>
+//                 <h1>{this.state.name}</h1>
+//                 <button type="button" onClick={this.update}>Update</button>
+//             </div>
+//         );
+//     }
+// };
+
+// import React, {Component} from 'react';
+
+// class Child extends Component {
+//     constructor(props) {
+//         super(props);
+//         console.log("Child constructor called");
+//     }
+
+//     render() {
+//         console.log("Child render called");
+//         return (
+//             <div>
+//                 <h1>{this.props.name}</h1>
+//             </div>
+//         );
+//     }
+// };
+
+
+// class Person extends Component {
+//     constructor() {
+//         super();
+//         this.state = {
+//             name: "hassan"
+//         };
+//         this.update = this.update.bind(this);
+//         console.log("Parent constructor called");
+//     }
+
+//     update() {
+//         this.setState({
+//             name: "NUman"
+//         })
+//         console.log("Parent state update");
+//     }
+
+//     render() {
+//         console.log("Parent render called");
+//         return (
+//             <div>
+//                 <h1><Child name={this.state.name}/></h1>
+//                 <button type="button" onClick={this.update}>Update</button>
+//             </div>
+//         );
+//     }
+// };
+
+// export default Person;
+
+// import React, {Component} from 'react';
+
+// class Person extends Component {
+//     constructor() {
+//         super();
+//         this.state = {
+//             data: ""
+//         }
+//         console.log("constructor Called")
+//     }
+//     componentDidMount() {
+//         setTimeout(()=>{
+//             this.setState({
+//                 data: "Hassan Jawed"
+//             })
+//         }, 1000);
+//         console.log("ComponentDidMount called");
+//     }
+//     render() {
+//         console.log("Render called");
+//         return(
+//             <div>
+//                 <h1>Fetching Data: {this.state.data}</h1>
+//                 <button type="button" onClick={()=>{this.setState({data: "ahmad"+1})}}>Update</button>
+//             </div>
+//         );
+//     }
+// };
+
+// export default Person;
+
+
+//infinite loop
+// import React, {Component} from 'react';
+// class Person extends Component {
+//     constructor() {
+//         super();
+//         this.state = {
+//             count: 0
+//         }
+//     }
+//     render() {
+//         console.log("render called and count value is ", this.state.count);
+//         if (this.state.count < 50) {
+//         this.setState(prevState => ({
+//             count: prevState.count + 1
+//         }));
+//         }
+        
+//         console.log("state Update");
+//         return (
+//             <div></div>
+//         );
+//     }
+// };
+
+// export default Person;
