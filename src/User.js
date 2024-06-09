@@ -211,3 +211,215 @@
 // }
 
 // export default User;
+
+
+// import React, {useState, useEffect} from 'react';
+
+// const User = () => {
+//     const [count, setCount] = useState(0);
+//     const [count2, setCount2] = useState(0);
+//     useEffect(()=>{                         //useEffect as ComponentDidUpdate
+//         console.log("useEffect Called");
+//     }, [count]);
+//     useEffect(()=>{                         //useEffect as ComponentDidUpdate
+//         console.log("useEffect2 Called");
+//     },[count2]);
+//     return (
+//         <div>
+//             <h1>Count: {count}</h1>
+//             <button type="button" onClick={()=>{setCount(count+1)}}>Increment</button>
+//             <h1>Count2: {count2}</h1>
+//             <button type="button" onClick={()=>{setCount2(count2+1)}}>Increment</button>
+//         </div>
+//     );
+// }
+
+// export default User;
+
+
+
+// import React, {useState, useEffect} from 'react';
+
+// const Child = (props) => {
+//     useEffect(()=>{
+//         console.log("Child useEffect Called");
+//     });
+//     return (
+//         <h1>Child Element: {props.arg}</h1>
+//     );
+// }
+
+
+// const User = () => {
+//     const [count, setCount] = useState(0);
+//     return (
+//         <div>
+//             <h1>Count: {count}</h1>
+//             <button type="button" onClick={()=>{setCount(count+1)}}>Increment</button>
+//             <Child arg={count}/>
+//         </div>
+//     );
+// }
+
+// export default User;
+// import './styles.css'
+// import style from './custom.module.css';
+
+// const User = () => {
+//     const Styles = {
+//         backgroundColor: "blue"
+//     };
+//     return (
+//         <div>
+//             <h1 className="primary">Hello World</h1>
+//             <h1 style={{backgroundColor: "red"}}>Hello World</h1>
+//             <h1 style={Styles}>Hello World</h1>
+//             <h1 className={style.success}>Hello World</h1>
+//         </div>
+//     );
+// }
+
+// export default User;
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import {Table} from 'react-bootstrap';
+
+// const User = () => {
+//     const myData = [
+//         {name: "Hassan Jawed", ag: "2021-ag-5883", class: 12, address: {home: "Chak878", office: "pirmahal", town: "lahoe"}},
+//         {name: "Numan Jawed", ag: "2020-ag-5883", class: 2, address: {home: "Chak878", office: "pirmahal", town: "lahoe"}},
+//         {name: "Sohail Jawed", ag: "2019-ag-5883", class: 11, address: {home: "Chak878", office: "pirmahal", town: "lahoe"}},
+//         {name: "Shoaib Jawed", ag: "2018-ag-5883", class: 8, address: {home: "Chak878", office: "pirmahal", town: "lahoe"}},
+//     ];
+//     return (
+//         <>
+//             <Table variant='dark' striped>
+//                 <thead>
+//                     <tr>
+//                         <th>Serial No</th>
+//                         <th>Name</th>
+//                         <th>Rollno</th>
+//                         <th>Class</th>
+//                         <th>Address</th>
+//                     </tr>
+//                 </thead>
+//                 <tbody>
+//                    {
+//                     myData.map((student, index) => (
+//                     <tr key={index}>
+//                         <td>{index+1}</td>
+//                         <td>{student.name}</td>
+//                         <td>{student.ag}</td>
+//                         <td>{student.class}</td>
+//                         <td>
+//                             {
+//                                 <Table variant='warning' striped>
+//                                     <thead>
+//                                         <tr>
+//                                             <th>Home Address</th>
+//                                             <th>office Address</th>
+//                                             <th>Town Address</th>
+//                                         </tr>
+//                                     </thead>
+//                                     <tbody>
+//                                         {
+//                                             <tr>
+//                                                 <td>{student.address.home}</td>
+//                                                 <td>{student.address.office}</td>
+//                                                 <td>{student.address.town}</td>
+//                                             </tr>
+//                                         }
+//                                     </tbody>
+//                                 </Table>
+//                             }
+//                         </td>
+//                     </tr>
+//                     ))
+//                    }
+//                 </tbody>
+//             </Table>
+//         </>
+//     );
+// }
+
+// export default User;
+
+
+// const User = () => {
+//     const myData = [
+//         {name: "Hassan Jawed", ag: "2021-ag-5883", class: 12, address: {home: "Chak878", office: "pirmahal", town: "lahoe"}},
+//         {name: "Numan Jawed", ag: "2020-ag-5883", class: 2, address: {home: "Chak878", office: "pirmahal", town: "lahoe"}},
+//         {name: "Sohail Jawed", ag: "2019-ag-5883", class: 11, address: {home: "Chak878", office: "pirmahal", town: "lahoe"}},
+//         {name: "Shoaib Jawed", ag: "2018-ag-5883", class: 8, address: {home: "Chak878", office: "pirmahal", town: "lahoe"}},
+//     ];
+//     return (
+//         <div>
+//             <h1>My Data:</h1>
+//             {
+//                 myData.map(obj => (
+//                     <Bold data={obj}/>
+//                 ))
+//             }
+//         </div>
+//     );
+// }
+
+// const Bold = (props) => {
+//     return (
+//         <h2>
+//         <span style={{fontWeight: "bold"}}>{props.data.name} </span>
+//         <span style={{fontWeight: "bold"}}>{props.data.ag} </span>
+//         <span style={{fontWeight: "bold"}}>{props.data.class} </span>
+//         </h2>
+//     );
+// }
+
+// export default User;
+// import React, {useState, useMemo} from 'react';
+
+// const User = () => {
+//     const [count, setCount] = useState(0);
+//     console.log("parent render");
+//     return (
+        
+//         <div>
+//             <h1>Parent Component</h1>
+//             <Child />
+//             <h2>{count}</h2>
+//             <button onClick={()=>{update}}>Update</button>
+//         </div>
+//     );
+    
+// }
+
+
+// const Child = React.memo(() => {
+   
+//         console.log("child render");
+//         return (
+//             <h1>Hello</h1>
+//         );
+    
+// });
+
+
+import React, {useState, useMemo, useEffect} from 'react';
+
+const User = () => {
+    const [count, setCount] = useState(0);
+    const [count2, setCount2] = useState(0);
+    const update = useEffect(()=>{
+        console.log("update called");
+    }, [count]);
+    return (
+        
+        <div>
+            <h2>{count2}</h2>
+            <button onClick={()=>{setCount(count+1)}}>Update</button>
+            <h2>{count2}</h2>
+            <button onClick={()=>{setCount2(count2+1)}}>Update</button>
+        </div>
+    );
+    
+}
+
+export default User;
