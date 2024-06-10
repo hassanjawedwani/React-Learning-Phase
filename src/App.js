@@ -6,6 +6,7 @@ import Navbar from './Navbar';
 import Home from './Home';
 import About from './About';
 import Page404 from './Components/Page404'; 
+import User from './Components/User';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/*" element={<Page404 />} />
+        <Route path="/user/:namer" element={<User />} />
         {/* <Route path="/*" element={<Navigate to="/" />}/> */}
       </Routes>
       <Navbar />

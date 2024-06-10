@@ -1,0 +1,9 @@
+.navbar li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+
+.navbar .active {
+background-color: green;
+}
