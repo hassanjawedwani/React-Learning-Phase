@@ -1,5 +1,7 @@
 // import React from 'react';
 
+import { Component } from "react";
+
 // class Person extends React.Component {
 //     constructor(props) {
 //         super(props);
@@ -643,6 +645,106 @@
 //         console.log("child render");
 //         return (
 //             <h1>Hello</h1>
+//         );
+//     }
+// }
+
+// export default Person;
+
+// import React, { Component } from 'react';
+// class Person extends Component {
+//     constructor() {
+//         super();
+//         this.focusRef = React.createRef();
+//         this.focusRefFunc = this.focusRefFunc.bind(this);
+//     }
+
+//     focusRefFunc() {
+//         this.focusRef.current.focus();
+//     }
+
+//     render() {
+//         return (
+//         <div>
+//             <input type="email" placeholder="Enter Email" minLength={8} ref={this.focusRef} required />
+//             <button type="button" onClick={this.focusRefFunc}>Focus Input</button>
+            
+//         </div>
+//     );
+//     }
+// }
+
+// export default Person;
+
+
+// import React, { Component } from 'react';
+// class Person extends Component {
+//     constructor() {
+//         super();
+//         this.focusRef = React.createRef();
+//         this.keydownHandler = this.keydownHandler.bind(this);
+//     }
+
+
+//     keydownHandler(event) {
+//         if(event.key === '/') {
+//         event.preventDefault();
+
+//             if(this.focusRef.current) {
+//                 this.focusRef.current.focus();
+//             }
+//         }
+//     }
+
+//     componentDidMount() {
+//         document.addEventListener('keydown', this.keydownHandler);
+//     }
+
+//     componentWillUnmount() {
+//         document.removeEventListener('keydown', this.keydownHandler);
+
+//     }
+
+//     render() {
+//         return (
+//         <div>
+//             <input style={{borderRadius: 20}} type="search" placeholder="Search" ref={this.focusRef}  />
+//         </div>
+//         );
+//     }
+// }
+
+// export default Person;
+
+
+
+// const Child = forwardRef((props, forward) => {
+//   return <input type="text" placeholder="Enter text" ref={forward} />;
+// });
+
+// import React, {createRef} from 'react';
+
+// const Child = React.forwardRef((props,refer) => {
+//     return <input type="text" ref={refer}/>
+// });
+
+// class Person extends Component {
+//     constructor() {
+//         super();
+//         this.focusInput = createRef();
+//         this.focusInputFunc = this.focusInputFunc.bind(this);
+//     }
+  
+//     focusInputFunc() {
+//         this.focusInput.current.focus();
+//     };
+
+//     render() {
+//         return (
+//             <div>
+//               <Child ref={this.focusInput} />
+//               <button onClick={this.focusInputFunc}>Focus</button>
+//             </div>
 //         );
 //     }
 // }

@@ -1,5 +1,7 @@
 // import React from 'react';
 
+import { forwardRef } from "react";
+
 // const User = () => {
 //     const [count, setCount] = React.useState(0);
 //     const update = () => {
@@ -14,7 +16,7 @@
 // }
 // export default User;
 
-// props 
+// props
 
 // const Student = (props) => {
 //     return (
@@ -39,7 +41,6 @@
 // }
 
 // export default MyClass;
-
 
 // form input get
 
@@ -67,14 +68,13 @@
 
 // export default User;
 
-
 // import React from 'react';
 
 // const User = () => {
 //     const [isShowing, setIsShowing] = React.useState(true);
 //     const toggle = () => {
 //         setIsShowing(!isShowing);
-       
+
 //     }
 //     return (
 //         <div>
@@ -85,7 +85,6 @@
 // }
 
 // export default User;
-
 
 // import React, {useState} from 'react';
 
@@ -104,7 +103,7 @@
 
 //     const submitForm = event => {
 //         event.preventDefault();
-        
+
 //         console.log("Username:" , username);
 //         console.log("Favorite Movie:", favouriteMovie)
 //         console.log("Gender: ", gender);
@@ -118,7 +117,7 @@
 //         //     Hobbies: Object.keys(hobbies).filter(key=>hobbies[key]).join(", ")
 //         // }
 //         // console.log(data);
-       
+
 //     }
 
 //     const usernameHandler = event => {
@@ -130,7 +129,7 @@
 //     }
 
 //     const genderHandler = event => {
-//         setGender(event.target.value);       
+//         setGender(event.target.value);
 //     }
 
 //     const handleHobbies = event => {
@@ -156,10 +155,10 @@
 //             </label>
 //             <fieldset>
 //                 <legend>Gender: </legend>
-//                 <label htmlFor="male"> 
+//                 <label htmlFor="male">
 //                     <input type="radio" id="male" name="gender" value="male" checked={gender==='male'} onChange={genderHandler}/> Male
 //                 </label>
-//                 <label htmlFor="female"> 
+//                 <label htmlFor="female">
 //                     <input type="radio" id="female" name="gender" value="female" checked={gender==='female'} onChange={genderHandler}/> Female
 //                 </label>
 //             </fieldset>
@@ -182,7 +181,7 @@
 
 // export default User;
 
-//passing function as args 
+//passing function as args
 
 // import PropTypes from 'prop-types';
 
@@ -212,7 +211,6 @@
 
 // export default User;
 
-
 // import React, {useState, useEffect} from 'react';
 
 // const User = () => {
@@ -236,8 +234,6 @@
 
 // export default User;
 
-
-
 // import React, {useState, useEffect} from 'react';
 
 // const Child = (props) => {
@@ -248,7 +244,6 @@
 //         <h1>Child Element: {props.arg}</h1>
 //     );
 // }
-
 
 // const User = () => {
 //     const [count, setCount] = useState(0);
@@ -343,7 +338,6 @@
 
 // export default User;
 
-
 // const User = () => {
 //     const myData = [
 //         {name: "Hassan Jawed", ag: "2021-ag-5883", class: 12, address: {home: "Chak878", office: "pirmahal", town: "lahoe"}},
@@ -380,7 +374,7 @@
 //     const [count, setCount] = useState(0);
 //     console.log("parent render");
 //     return (
-        
+
 //         <div>
 //             <h1>Parent Component</h1>
 //             <Child />
@@ -388,38 +382,93 @@
 //             <button onClick={()=>{update}}>Update</button>
 //         </div>
 //     );
-    
+
 // }
 
-
 // const Child = React.memo(() => {
-   
+
 //         console.log("child render");
 //         return (
 //             <h1>Hello</h1>
 //         );
-    
+
 // });
 
+// import React, {useState, useMemo, useEffect} from 'react';
 
-import React, {useState, useMemo, useEffect} from 'react';
+// const User = () => {
+//     const [count, setCount] = useState(0);
+//     const [count2, setCount2] = useState(0);
+//     const update = useEffect(()=>{
+//         console.log("update called");
+//     }, [count]);
+//     return (
 
-const User = () => {
-    const [count, setCount] = useState(0);
-    const [count2, setCount2] = useState(0);
-    const update = useEffect(()=>{
-        console.log("update called");
-    }, [count]);
-    return (
-        
-        <div>
-            <h2>{count2}</h2>
-            <button onClick={()=>{setCount(count+1)}}>Update</button>
-            <h2>{count2}</h2>
-            <button onClick={()=>{setCount2(count2+1)}}>Update</button>
-        </div>
-    );
-    
-}
+//         <div>
+//             <h2>{count2}</h2>
+//             <button onClick={()=>{setCount(count+1)}}>Update</button>
+//             <h2>{count2}</h2>
+//             <button onClick={()=>{setCount2(count2+1)}}>Update</button>
+//         </div>
+//     );
 
-export default User;
+// }
+
+// export default User;
+
+// import React, { useRef, useEffect } from "react";
+// const User = () => {
+//   const focusRef = useRef(null);
+
+//   const keydownHandler = (event) => {
+//     if (event.key === "/") {
+//       event.preventDefault();
+//       if (focusRef.current) {
+//         focusRef.current.focus();
+//       }
+//     }
+//   };
+
+//   useEffect(() => {
+//     document.addEventListener("keydown", keydownHandler);
+//     return() => {
+//     document.removeEventListener("keydown", keydownHandler);
+
+//     }
+//   }, []);
+
+//   return (
+//     <div>
+//       <input
+//         style={{ borderRadius: 20 }}
+//         type="search"
+//         placeholder="Search"
+//         ref={focusRef}
+//       />
+//     </div>
+//   );
+// };
+
+// export default User;
+// import { useRef } from "react";
+
+// const Child = forwardRef((props, forward) => {
+//   return <input type="text" placeholder="Enter text" ref={forward} />;
+// });
+
+// const User = () => {
+//   const focusInput = useRef(null);
+
+//   const focusInputFunc = () => {
+//     focusInput.current.focus();
+//   };
+
+//   return (
+//     <div>
+//       <Child ref={focusInput} />
+//       <button onClick={focusInputFunc}>Focus</button>
+//     </div>
+//   );
+// }
+
+// export default User;

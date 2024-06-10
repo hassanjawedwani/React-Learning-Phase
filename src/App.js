@@ -9,8 +9,8 @@ import Person from './Person';
 function App() {
   return (
     <>
-      <User />  
-      {/* <Person /> */}
+      {/* <User />   */}
+      <Person />
       {/* <MyClass /> */}
     </>
   );
