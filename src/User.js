@@ -472,3 +472,33 @@ import { forwardRef } from "react";
 // }
 
 // export default User;
+
+// import React from 'react'
+
+// const RedHOC = (props) => {
+//     return <div style={{backgroundColor: "red"}}><props.cmp/></div>;
+// }
+// const GreenHOC = (props) => {
+//     return <div style={{backgroundColor: "green"}}><props.cmp/></div>;
+// }
+
+// const Counter = () => {
+//     const [count, setCount] = React.useState(0);
+//     return (
+//         <div>
+//             <h1>{count}</h1>
+//             <button type="button" onClick={()=>{setCount(count+1)}}>Update</button>
+//         </div>
+//     );
+// }
+
+// const User = () => {
+//     return (
+//         <div>
+//             <Counter/>
+//             <RedHOC cmp={Counter}/>
+//             <GreenHOC cmp={Counter}/>
+//         </div>
+//     );
+// }
+// export default User;
