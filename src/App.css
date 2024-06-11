@@ -7,3 +7,7 @@
 .navbar .active {
 background-color: green;
 }
+
+body {
+    text-align: center;
+}

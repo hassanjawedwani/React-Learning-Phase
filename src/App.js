@@ -1,26 +1,21 @@
-import './App.css';
-// import User from './User';
-// import Person from './Person';
-import { BrowserRouter , Routes, Route } from 'react-router-dom';
-import Navbar from './Navbar';
-import Home from './Home';
-import About from './About';
-import Page404 from './Components/Page404'; 
-import User from './Components/User';
-
+import { useEffect, useState} from "react";
 
 function App() {
+  const [quotesArray, setQuotesArray] = useState([]);
+  useEffect(()=>{
+    fetch("https://cat-fact.herokuapp.com/facts")
+    .then((result)=>{
+      result.json()
+      .then(resp =>{
+        setQuotesArray(resp)
+      })
+    })
+  }, []);
+  
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/*" element={<Page404 />} />
-        <Route path="/user/:namer" element={<User />} />
-        {/* <Route path="/*" element={<Navigate to="/" />}/> */}
-      </Routes>
-      <Navbar />
-    </BrowserRouter>
+    <div>
+    {quotesArray.map((obj, key) => <h1 key={key}>{obj.text}</h1>)}
+    </div>
   );
 }
 
