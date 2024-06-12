@@ -1,0 +1,15 @@
+{
+  "posts": [
+    {
+      "name": "Hassan Jawed",
+      "email": "hassanjawedwani@gmail.com",
+      "phone": "03117415786"
+    },
+    {
+      "id": "eb74",
+      "name": "Numan Jawed",
+      "email": "numanjawedwani@gmail.com",
+      "phone": "03807823822"
+    }
+  ]
+}
