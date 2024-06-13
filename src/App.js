@@ -1,5 +1,10 @@
 // import { useEffect, useState} from "react";
 
+// import { useContext, useState } from "react";
+// import { MyContext } from "./MyContext";
+
+// import { useState } from "react";
+
 // import { useState } from "react";
 
 // function App() {
@@ -156,7 +161,7 @@
 //           }
 //         </tbody>
 //       </Table>
-//       <button type="button" style={{display: "block", width: "100%", margin: "auto", backgroundColor: "lightgreen"}} onClick={()=>{setIsAddStudent(true)}}>Add Student</button>
+//       <button type="button" style={{display: "block", width: "100%", margin: "auto", backgroundColor: "green"}} onClick={()=>{setIsAddStudent(true)}}>Add Student</button>
 //       {isAddStudent && <AddStudent updateUI={updateUI} setIsAddStudent={setIsAddStudent}/>}
 //       {isEditStudent && <EditStudent editId={editId} updateUI={updateUI} setIsEditStudent={setIsEditStudent} />}
 //       {/* <form>
@@ -171,3 +176,104 @@
 // };
 
 // export default App;
+
+// const Child = (props) => {
+//   // const [prevValue, setPreviousValue] = useState(0);
+//   const ref = useRef();
+ 
+  
+//   useEffect ( () => {
+     
+//   ref.current =  props.count;
+//   });
+//   const prevValue = ref.current;
+//   return (
+//     <div>
+//       <h2>Current Count: {props.count}</h2>
+//       <h2>Previous Count: {prevValue}</h2>
+//     </div>
+//   );
+// }
+
+// import React, { Component } from "react";
+// import {CommonContext} from "./Components/CommonContext";
+// import Main from "./Main";
+// import UpdateButton from "./UpdateButton";
+
+// class App extends Component {
+//   constructor() {
+//     super();
+//     this.updateColor = () => {
+//       this.setState({
+//         color: "red"
+//       });
+//     };
+
+//     // Move this.state initialization outside of the function
+//     this.state = {
+//       color: "green",
+//       updateColor: this.updateColor
+//     };
+//   }
+
+//   render() {
+//     return (
+//       <CommonContext.Provider value={this.state}>
+//         <h1>Hello App Component</h1>
+//         <Main />
+//         <UpdateButton/>
+//       </CommonContext.Provider>
+//     );
+//   }
+// }
+
+// export default App;
+
+// const Child1 = () => {
+//   const {password} = useContext(MyContext);
+//   return (
+//     <h1>This is Child1 Component, Pass:{password}</h1>
+//   );
+// }
+// const Child2 = () => {
+//   const {password} = useContext(MyContext);
+//   return (
+//     <h1>This is Child2 Component, Pass:{password}</h1>
+//   );
+// }
+// const Child3 = () => {
+//   const {password} = useContext(MyContext);
+//   return (
+//     <h1>This is Child3 Component, Pass:{password}</h1>
+//   );
+// }
+
+
+
+// const App = () => {
+//   const [password,] = useState("HassanJawed123");
+//   return (
+//     <div>
+//       <h1>This is App Component, Pass: {password}</h1>
+//       <MyContext.Provider value={{password}}>
+//       <Child1/>
+//       <Child2/>
+//       <Child3/>
+//       </MyContext.Provider>
+//     </div>
+//   )
+// }
+
+// export default App;
+
+import Home from './Containers/HomeContainers'
+
+const App = () => {
+    return (
+        <div>
+          <Home />
+        </div>
+    );
+}
+
+export default App;
